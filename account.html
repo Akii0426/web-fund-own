@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Account | NovaDrop</title>
+
+        <link rel="stylesheet" href="../css/index_css.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <button id="menuBtn" class="nav__toggle" aria-label="Open menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+            <div class="nav__brand">NOVADROP</div>
+        </nav>
+
+        <aside id="sideMenu" class="sidebar">
+            <div class="sidebar__header">
+                <button id="closeBtn" class="nav__toggle" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+                <div class="nav__brand">NOVADROP</div>
+            </div>
+            <nav class="sidebar__nav">
+                <a href="../index.html">Store</a>
+                <a href="about_us.html">About Us</a>
+                <a href="account.html" class="active">Account</a>
+            </nav>
+            <div class="sidebar__footer">
+                <div class="theme-switch-wrapper">
+                    <span>Theme</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <small>&copy; 2026 NovaDrop</small>
+            </div>
+        </aside>
+
+        <main class="account-page">
+            <section class="account-card">
+                <img id="profileAvatar" src="../images/placeholder.jpg" alt="Profile Avatar" class="account-avatar" />
+                <h1 id="profileUsername">Username</h1>
+                <p id="profileEmail">user@example.com</p>
+                <button id="signOutButton" class="button"><b>Sign Out</b></button>
+            </section>
+        </main>
+
+        <script src="../js/account.js"></script>
+    </body>
+</html>

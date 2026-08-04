@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaDrop | Store</title>
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/index_css.css">
+</head>
+<body>
+
+    <!-- --- 1. NAVBAR --- -->
+    <nav class="navbar">
+        <button id="menuBtn" class="nav__toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+        <div class="nav__brand">NOVADROP</div>
+    </nav>
+
+    <!-- --- 2. SIDEBAR MENU --- -->
+    <aside id="sideMenu" class="sidebar">
+        <div class="sidebar__header">
+            <button id="closeBtn" class="nav__toggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="nav__brand">NOVADROP</div>
+        </div>
+        
+        <nav class="sidebar__nav">
+            <a href="pages/store.html" class="active">Store</a>
+            <a href="pages/about_us.html">About Us</a>
+            <a href="pages/account.html">Account</a>
+        </nav>
+
+        <div class="sidebar__footer">
+            <div class="theme-switch-wrapper">
+                <span>Theme</span>
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <small>&copy; 2026 NovaDrop</small>
+        </div>
+    </aside>
+
+    <!-- --- 3. MAIN STORE CONTENT --- -->
+    <main class="container">
+        
+        <div class="page-header">
+            <h2 class="title-accent">NEW RELEASE</h2>
+            <div class="header-line"></div>
+        </div>
+        
+        <div id="featuredContainer" class="featured-wrapper">
+            <!-- JavaScript injects the massive Hero Banner here -->
+        </div>
+
+        <!-- --- 4. GAME CATALOGUE SEARCH PANEL --- -->
+        <section id="catalogue-section" class="panel">
+            <div class="catalogue-controls">
+                <div class="control-group">
+                    <label for="searchInput">Search by title</label>
+                    <input type="text" id="searchInput" placeholder="e.g. Neon Phantom">
+                </div>
+
+                <div class="control-group">
+                    <label for="genreFilter">Genre</label>
+                    <select id="genreFilter">
+                        <option value="all">All Genres</option>
+                        <option value="FPS">FPS</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Simulation">Simulation</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="platformFilter">Platform</label>
+                    <select id="platformFilter">
+                        <option value="all">All Platforms</option>
+                        <option value="Windows">Windows</option>
+                        <option value="Mac">Mac</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="sortSelect">Sort by</label>
+                    <select id="sortSelect">
+                        <option value="default">Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="title-asc">Title: A–Z</option>
+                        <option value="title-desc">Title: Z–A</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="resultsCount" class="results-count"></p>
+            <div id="catalogueGrid" class="category-row"></div>
+            <p id="emptyState" class="empty-state" style="display: none;">
+                No games match your search criteria. Try adjusting your filters.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- --- 5. GAME DETAILS POP-UP MODAL --- -->
+    <div id="gameModal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="modal-close">&times;</button>
+            <div class="modal-layout">
+                <div class="modal-image-col">
+                    <img id="modalImage" src="" alt="Game Image">
+                </div>
+                <div class="modal-info-col">
+                    <h2 id="modalTitle" class="modal-title">Game Title</h2>
+                    <span id="modalGenre" class="genre-badge modal-badge">Genre</span>
+                    <p id="modalDesc" class="modal-desc">Description goes here.</p>
+                    
+                    <div class="modal-stats">
+                        <div class="stat-box">
+                            <span class="stat-label">Rating</span>
+                            <span id="modalRating" class="stat-value star-color"></span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Positive</span>
+                            <span id="modalPos" class="stat-value text-green"></span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Negative</span>
+                            <span id="modalNeg" class="stat-value text-red"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <span id="modalPrice" class="game-price"></span>
+                        <button class="cart-btn">🛒 Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index_js.js"></script>
+</body>
+</html>
